@@ -1,0 +1,71 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+svg {
+    height: 25px;
+    width: 25px;
+    fill: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-input {
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#social-container {
+    display: flex;
+    align-items: center;
+}
+
+#facebook {
+    color: white;
+    padding: 5px;
+    margin: 3px;
+    background-color: rgb(59, 89, 152);
+}
+
+#twitter {
+    color: white;
+    padding: 5px;
+    margin: 3px;
+    background-color: rgb(27, 178, 233);
+}
+
+#login {
+    width: 300px;
+    height: 35px;
+    margin-top: 10px;
+    background-color: rgb(59, 89, 152);
+    color: white;
+    font-size: small;
+    font-weight: bold;
+}
+
+#sign-up {
+    color: #17c0eb;
+    text-decoration-line: none;
+}
+
+#forget {
+    color: #4b4b4b;
+    text-decoration-line: none;
+}
+
+#or {
+    background-color: #a4b0be;
+    padding: 5px;
+    border-radius: 50%;
+}

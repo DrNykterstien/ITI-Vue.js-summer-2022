@@ -1,0 +1,65 @@
+
+svg {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    background-color: #2ed573;
+    border-width: 30px;
+    border-radius: 50%;
+}
+
+h1 {
+    padding: 60 0 0 30;
+    color: #ffffff;
+    font-size: 50px;
+}
+
+h3 {
+    color: #2ed573;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+input {
+    margin: 6px;
+}
+
+#header {
+    background-color: #7bed9f;
+    width: auto;
+    height: 150px;
+}
+
+#footer {
+    background-color: #7bed9f;
+    width: auto;
+    height: 50px;
+}
+
+#container {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#submit {
+    padding: 8px 16px;
+    margin: 8px 30px;
+}
+
+.section {
+    padding: 12px;
+    margin: 12px;
+    border-style: dotted;
+    border-width: 0 0 2 0;
+    border-color: #2ed573;
+}
+
+.input-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}

@@ -1,0 +1,50 @@
+
+body {
+    background-image: url('/Day02/lab/assets/garden.jpg');
+    text-align: center;
+}
+
+h1 {
+    color: #05c46b;
+    font-size: 50px;
+    text-shadow: 2px 2px 3px black;
+}
+
+h2 {
+    color: #0be881;
+    font-size: 30px;
+}
+
+h3 {
+    color: #1e272e;
+}
+
+p {
+    color: #0be881;
+    font-size: large
+}
+
+span {
+    color: #1e272e;
+}
+
+#content {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    border-style: dotted;
+    border-width: 8px 0px;
+}
+
+.item-card {
+    width: 400px;
+    margin: 5px;
+}
+
+#footer {
+    margin: 30px;
+}

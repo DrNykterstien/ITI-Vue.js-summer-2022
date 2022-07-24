@@ -1,0 +1,42 @@
+
+table {
+    margin: 100px auto;
+    width: 650px;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-collapse: collapse;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #3498db;
+    border-bottom: 2px solid black;
+    color: white;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+p {
+    font-style: italic;
+    color: #57606f;
+}
+
+span {
+    text-decoration-line: underline;
+    font-style: italic;
+    color: #57606f;
+}
+
+.dark {
+    background-color: #747d8c;
+}
+
+.dark-light {
+    background-color: #a4b0be;
+}
