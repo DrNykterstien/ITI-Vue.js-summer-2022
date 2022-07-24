@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Accepting 3 values</title>
+    </head>
+    <body>
+        <h1>Adding -- Multiplying -- and dividing 3 values</h1>
+        <hr />
+        <script>
+            var arr = [];
+            while (true) {
+                var value = prompt('Enter Value');
+                if (isNaN(value)) continue;
+                arr.push(value * 1);
+                if (arr.length === 3) break;
+            };
+            document.write(`<font color="red" size="3">Sum of the 3 values</font> ${arr[0]} + ${arr[1]} + ${arr[2]} = ${arr.reduce((a, b) => a + b)} <br />`);
+            document.write(`<font color="red" size="3">Multiplication of the 3 values</font> ${arr[0]} * ${arr[1]} * ${arr[2]} = ${arr.reduce((a, b) => a * b)} <br />`);
+            document.write(`<font color="red" size="3">Division of the 3 values</font> ${arr[0]} / ${arr[1]} / ${arr[2]} = ${arr.reduce((a, b) => a / b)} <br />`);
+        </script>
+    </body>
+</html>

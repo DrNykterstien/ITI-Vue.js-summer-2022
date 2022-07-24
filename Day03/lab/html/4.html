@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Accepting Data</title>
+    </head>
+    <body>
+        <script>
+            function input (msg) {
+                while (true) {
+                    var data = prompt(msg);
+                    if (data) return data;
+                }
+            }
+
+            var imageSrc = input('Enter Img Src');
+            var fontColor = input('Enter Font Color');
+            document.write(`<font color="${fontColor}" size="2">This is your img</font> <br />`);
+            document.write(`<img style="border: 3px solid ${fontColor};" src="${imageSrc}"> <br />`);
+        </script>
+    </body>
+</html>

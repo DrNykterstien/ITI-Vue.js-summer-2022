@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Accepting values</title>
+    </head>
+    <body>
+        <script>
+            var sum = 0;
+            while (true) {
+                var value = prompt('Enter Value');
+                if (isNaN(value)) continue;
+                sum += value * 1;
+                if (value === 0 || sum > 100) break;
+            };
+            document.write(`Total Sum : ${sum}`);
+        </script>
+    </body>
+</html>
