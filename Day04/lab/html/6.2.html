@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Array of Number Operations</title>
+</head>
+
+<body>
+    <script>
+        function checkAllNumbers(str) {
+            return str.split(',').every((v) => {
+                return !isNaN(v)
+            })
+        }
+
+        function sort(str, type) {
+            return str.split(',').map((n) => parseInt(n)).sort((a, b) => {
+                if (type.toLowerCase() === 'asc') return a - b
+                else return b - a;
+            })
+        }
+
+        function reverse(str) {
+            return str.split(',').reverse()
+        }
+
+        function discount(str) {
+            return str.split(',').map((n) => {
+                return parseInt(n) * 70 / 100;
+            });
+        }
+
+        function concat(str) {
+            return str.split(',').join('***');
+        }
+
+        function divisable(str, v) {
+            return str.split(',').filter((n) => n % v == 0);
+        }
+
+        var optionsArray = ["a", "b", "c", "d", "e", "f", "g", "h"];
+
+        function game() {
+            while (true) {
+                var input = prompt('Enter your array : ');
+                if (input.trim() && checkAllNumbers(input)) break;
+            }
+
+            while (true) {
+                var op = prompt(`Choose the operation(${optionsArray}) : `);
+                if (op.trim() && optionsArray.includes(op.toLowerCase())) break;
+            }
+
+            if (op === 'b') input = sort(input, 'asc');
+            if (op === 'c') input = sort(input, 'desc');
+            if (op === 'd') input = reverse(input);
+            if (op === 'g') input = discount(input);
+            if (op === 'h') input = concat(input);
+
+            if (op === 'f') {
+                while (true) {
+                    var num = prompt('Enter number : ');
+                    if (num.trim() && !isNaN(num)) break;
+                }
+                let result = divisable(input, num);
+                if (result.length == 0) alert('No Divisable Numbers')
+                else alert(`Result : ${result}`)
+            } else if (op === 'e') {
+                let result = divisable(input, 2);
+                if (result.length == 0) alert('No Even Numbers')
+                else alert(`Result : ${result}`)
+            } else {
+                alert(`Result : ${input}`)
+            }
+        }
+
+        while (true) {
+            game()
+            var flag = prompt('Y: Continue, N: Not Continue : ')
+            if (flag.toLowerCase().trim() !== 'y') break;
+        }
+    </script>
+</body>
+
+</html>

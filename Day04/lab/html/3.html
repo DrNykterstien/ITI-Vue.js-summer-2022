@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>Show Today Info</title>
+    </head>
+    <body>
+        <script>
+            var today = new Date();
+            document.write(`Today is ${today.toLocaleDateString()}, ${new Intl.DateTimeFormat('en-US', { weekday: 'long'}).format(today)}`)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Mobile Number Validator</title>
+    </head>
+    <body>
+        <script>
+            var prefixes = ['010', '011', '012', '015']
+
+            function validatePhoneNumber(phoneNumber) {
+                return (phoneNumber.length == 11 && prefixes.includes(phoneNumber.split('-')[0]) && phoneNumber.split('-')[1] && !isNaN(phoneNumber.split('-')[1]));
+            }
+
+            while(true) {
+                var name = prompt('Enter your name : ');
+                if (name.trim()) break;
+            }
+
+            while(true) {
+                var phone = prompt('Enter your phone number (xxx-xxxxxxx) : ');
+                if (validatePhoneNumber(phone)) break;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Convert to Title Case</title>
+    </head>
+    <body>
+        <script>
+            function toTitleCase(str) {
+                return str.toLowerCase().split(' ').map((p) => {
+                    return p.charAt(0).toUpperCase() + p.slice(1);
+                }).join(' ');
+            }
+            while (true) {
+                var input = prompt('Enter your name : ');
+                if (input) break;
+            }
+            document.write(`input : ${input} <br />`);
+            document.write(`output : ${toTitleCase(input)} <br />`);
+        </script>
+    </body>
+</html>
