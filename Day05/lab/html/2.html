@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Add data to table</title>
+    </head>
+    <body>
+        <input type="text" name="data" id="data">
+        <button onclick="game()">Add</button>
+
+        <table id="data-table" width="300" border="1">
+            <tr>
+                <th>No.</th>
+                <th>News</th>
+            </tr>
+        </table>
+        <button onclick="displayRowsCount()">count rows</button>
+
+        <script>
+            var i = 1;
+
+            function game() {
+                var data = document.getElementById('data');
+                if (data.value.trim()){
+                    addDataToTable(data.value.trim());
+                    data.value = '';
+                } else data.value = '';
+            }
+
+            function addDataToTable(value) {
+                var data = document.getElementById('data');
+                var table = document.getElementById('data-table');
+                var tr = document.createElement('tr');
+                var td1 = document.createElement('td')
+                td1.innerHTML = i;
+                var td2 = document.createElement('td')
+                td2.innerHTML = value;
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                i++;
+                table.appendChild(tr);
+            }
+
+            function displayRowsCount() {
+                alert(`Rows Count : ${i - 1}`)
+            }
+        </script>
+    </body>
+</html>

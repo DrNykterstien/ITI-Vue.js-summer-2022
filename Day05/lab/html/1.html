@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Scroll Exercise</title>
+    </head>
+    <body>
+        <a onclick="game()">Click Me !!!</a>
+
+        <script>
+            function game() {
+                var win = open('http://127.0.0.1:5500/Day05/lab/html/empty.html', '', 'left=100,top=100,width=700,height=300');
+
+                setInterval(function() {
+                    win.scrollBy(0, 500);
+                }, 1000)
+            }
+        </script>
+    </body>
+</html>

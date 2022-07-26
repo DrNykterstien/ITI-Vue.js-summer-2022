@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Typing</title>
+    </head>
+    <body>
+        <button onclick="game()">Show Message</button>
+    </body>
+
+    <script>
+        var message = 'Incididunt cillum eu ea mollit nisi commodo ullamco aute aliquip. Enim voluptate voluptate ad laborum. Veniam nostrud veniam sint ut nulla veniam. Cillum et laboris ex aliquip et do. Duis nisi ipsum exercitation eiusmod. Dolor cupidatat aute pariatur anim ex qui irure cupidatat Lorem ipsum id.'
+        var i = 0;
+
+        function game() {
+            var w = window.open('', '', 'left=100,top=100,width=700,height=300');
+            
+            var interval = setInterval(function () {
+                if (i == message.length - 1) { 
+                    clearInterval(interval);
+                    w.alert('Will be closed');
+                    w.close(); 
+                }
+                w.document.write(message[i]);
+                i++;
+            },100);
+        }
+    </script>
+</html>

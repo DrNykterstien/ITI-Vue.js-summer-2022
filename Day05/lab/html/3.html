@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Slide Show Game</title>
+    </head>
+    <body>
+        <div id="imagewrapper">
+            <img src="/Day05/lab/assets/cat-1.jpg" id="myimg"/>
+        </div>
+        <div id="buttonswrapper">
+            <button onclick="startshow()">Start</button>
+            <button onclick="nextImg();">Next</button>
+            <button onclick="prevImg();">Prev</button>
+            <button onclick="stopshow()">Stop</button>
+        </div>
+
+        <script>
+            var imagesArray = ["/Day05/lab/assets/cat-1.jpg", "/Day05/lab/assets/cat-2.jpg", "/Day05/lab/assets/cat-3.jpg", "/Day05/lab/assets/cat-4.jpg", "/Day05/lab/assets/cat-5.jpg"];
+            i = 0;
+
+            function nextImg() {
+                i++;
+                if (i >= imagesArray.length) i = 0;
+                myimg.src= imagesArray[i];
+            }
+
+            function prevImg() {
+                i--;
+                if (i < 0) i = imagesArray.length-1;
+                myimg.src = imagesArray[i];
+            }
+
+            function startshow() {
+                t=setInterval('nextImg()', 2000);
+            }
+
+            function stopshow() {
+                clearInterval(t);
+            }
+        </script>
+    </body>
+</html>

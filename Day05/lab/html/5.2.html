@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Result for Registeration</title>
+    </head>
+    <body>
+        <img width="50" height="60" src="" id="gender">
+        <b>Welcome</b>
+        <span id="name">tte</span>
+    </body>
+
+    <script>
+        var obj = {};
+        var queryString = window.location.search.substring(1).split('&').forEach(function(item) {
+            var res = item.split('=')
+            obj[res[0]] = res[1]
+        });
+
+        var img = document.getElementById('gender');
+        var placeholder = document.getElementById('name');
+        
+        if (obj.gender == 'male') img.src = '/Day05/lab/assets/svg/male.svg';
+        else img.src = '/Day05/lab/assets/svg/female.svg';
+        
+        placeholder.innerText = obj.name;
+        placeholder.style.color = obj.color;
+    </script>
+</html>
