@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Ex.1</title>
+    </head>
+    <body>
+        <script>
+            const sort = (arr, type) => {
+                return arr.sort((a, b) => {
+                    if (type.toLowerCase() === 'asc') return a - b
+                    else return b - a;
+                })
+            }
+
+            let arr = [10, 50, 18, 32, -120, -150, 120, 0, 180];
+
+            document.write(`ASC Sort : ${sort(arr, 'ASC')} <br />`)
+            document.write(`DESC Sort : ${sort(arr, 'DESC')} <br />`)
+            document.write(`Larger than 50 : ${arr.filter(e => e > 50)} <br />`)
+            document.write(`Min number : ${Math.min(...arr)}, Max number : ${Math.max(...arr)} <br />`)
+        </script>
+    </body>
+</html>

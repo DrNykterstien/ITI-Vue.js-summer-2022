@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Ex.2</title>
+    </head>
+    <body>
+        <script>
+            const mapper = {
+                '+': 'sum',
+                '-': 'subtraction',
+                '*': 'multiplication',
+                '/': 'division'
+            }
+
+            const magic = (op, ...numbers) =>
+                console.log(`result of ${mapper[op]} operation for ${numbers} is ${eval(numbers.join(op))}`)
+
+            magic('+', 3, 1, 6, 3)
+        </script>
+    </body>
+</html>
