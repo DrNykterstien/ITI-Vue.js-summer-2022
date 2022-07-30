@@ -1,0 +1,97 @@
+
+mark {
+    background-color: #eb3b5a;
+    font-weight: bold;
+}
+
+mark:hover {
+    background-color: #fa8231;
+}
+
+img {
+    margin: 8px;
+    width: 100px;
+    border-color: #3867d6;
+    border-style: ridge;
+    border-width: 4px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 8px #fc5c65;
+    transition-duration: 2s;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+img:active {
+    transform: scale(4);
+}
+
+#container {
+    margin: 20px auto;
+    border-color: #fed330;
+    border-style: ridge;
+    border-width: 4px;
+    border-radius: 6px;
+    box-shadow: 7px 7px 25px #fc5c65, 7px 7px 25px #2bcbba inset;
+    width: 80%;
+    height: 550px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    transition-duration: 3s;
+}
+
+#container:hover {
+    transform: skew(15deg);
+    box-shadow: 7px 7px 25px #2bcbba, 7px 7px 25px #2bcbba inset;
+}
+
+#container:active {
+    transform: scale(0.8);
+}
+
+#sec-1 {
+    margin: 5px;
+    border-color: #8854d0;
+    border-style: ridge;
+    border-width: 4px;
+    border-radius: 6px;
+    box-shadow: 7px 7px 25px #26de81 inset;
+    overflow: auto;
+    column-count:3;
+    column-rule:2px solid #fc5c65;
+    width: 50%;
+    transition-duration: 3s;
+    resize:both;
+}
+
+#sec-1::selection {
+    color: #f7b731;
+}
+
+#sec-1:hover {
+    text-decoration-line: underline;
+}
+
+#sec-2 {
+    text-align: center;
+    margin: 5px;
+    padding: 5px 10px;
+    border-color: #3867d6;
+    border-style: ridge;
+    border-width: 4px;
+    border-radius: 6px;
+    box-shadow: 7px 7px 25px #2bcbba inset;
+    overflow: scroll;
+    width: 50%;
+    transition-duration: 3s;
+    resize:both;
+}
+
+@media all and (max-width: 400px) {
+    img { 
+        transform: rotate(120);
+    }
+}

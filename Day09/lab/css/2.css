@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    margin: 2px;
+    color: #eb3b5a;
+    text-decoration-line: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner-row {
+    margin: 20px 0px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#left-card {
+    height: 300px;
+    background-color: #d1d8e0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgs-row {
+    margin: 1px;
+    padding: 6px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
