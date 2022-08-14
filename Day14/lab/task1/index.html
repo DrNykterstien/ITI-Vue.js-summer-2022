@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title> Products </title>
+    <style>
+        .header{
+            background: darkslateblue;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myapp">
+        <div class="container">
+            <form action="#" method="get" class="row">
+                <div class="header" class="my-3 p-3">
+                    <div class="row justify-content-between align-items-baseline">
+                        <h2 class="col">Form</h2>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="title"> title </label>
+                    <input type="text" class="form-control" v-model="post.title" id="title"/>
+                </div>
+                <div class="form-group">
+                    <label > content </label>
+                    <textarea type="text" class="form-control" v-model="post.content"></textarea>
+                </div>
+                <div class="form-group">
+                    <label > share immediatly </label>
+                    <input type="checkbox" v-model="post.sendimmediaty" />
+                </div>
+                <div class="form-group">
+                    <label>facebook</label>
+                    <input type="radio" name="radio" v-model="post.shareon" /><br/>
+                    <label>twitter</label>
+                    <input type="radio" name="radio" v-model="post.shareon" /><br/>
+                    <label>instagram</label>
+                    <input type="radio" name="radio" v-model="post.shareon" />
+                </div>
+            </form><br/><br/><br/><br/>
+
+            <div class="row">
+                <div class="header" class="my-3 p-3">
+                    <div class="row justify-content-between align-items-baseline">
+                        <h2 class="col">Data</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-6">title </label>
+                    <label class="col-6">{{post.title}}</label>
+                </div>
+                <div class="row">
+                    <label class="col-6">content </label>
+                    <label class="col-6">{{post.content}}</label>
+                </div>
+                <div class="row">
+                    <label class="col-6">share immediatly </label>
+                    <label class="col-6">{{post.sendimmediaty}}</label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data: () => ({      
+                post:{
+                    title:'',
+                    content:'',
+                    series:'',
+                    categories:'',
+                    shareon:[],
+                    sendimmediaty:false
+
+                },
+                postData:{
+                    series:["1st","2nd","3rd"],
+                    categories:["prog","math","SE","OS"],
+                    shareon:["facebook","twitter","instagram"]
+                }
+
+            }),
+            methods: {
+
+            }
+            
+        });
+        app.mount("#myapp");
+    </script>
+
+</body>
+
+</html>
